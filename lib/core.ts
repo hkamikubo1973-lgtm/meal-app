@@ -1,5 +1,5 @@
 // lib/core.ts
-import * as SQLite from "expo-sqlite/next";
+import * as SQLite from "expo-sqlite";
 import type { ActivityId } from "./activities"; // 種目IDだけ使う
 
 // ================================
@@ -54,13 +54,22 @@ export async function initDb(): Promise<void> {
   `);
 }
 
+
 // （開発用）既存テーブル一覧をログに出す
 export async function debugListTables(): Promise<void> {
   const db = await getDb();
+
+  // DB からテーブル一覧を取得
   const rows = await db.getAllAsync<{ name: string }>(
     `SELECT name FROM sqlite_master WHERE type='table'`
   );
-  console.log("DB tables:", rows.map((r) => r.name));
+
+if (rows && Array.isArray(rows)) {
+  console.log("DB tables:", rows.map((r: any) => r.name));
+} else {
+  console.log("DB tables: no rows or invalid result", rows);
+}
+
 }
 
 // ======================================================
