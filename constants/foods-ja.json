@@ -1,0 +1,16 @@
+[
+  {"name":"バナナ（中1本/120g）","aliases":["banana"],"kcal":105,"p":1.3,"f":0.3,"c":27.0,"fiber":3.1,"sodium":0.0},
+  {"name":"無調整豆乳 200ml","aliases":["豆乳","soy milk"],"kcal":92,"p":7.4,"f":5.4,"c":6.0,"fiber":0.6,"sodium":0.08},
+  {"name":"ゆで卵 1個","aliases":["卵","たまご","egg"],"kcal":80,"p":6.6,"f":5.4,"c":0.2,"fiber":0,"sodium":0.2},
+  {"name":"木綿豆腐 150g","aliases":["豆腐","tofu"],"kcal":108,"p":12.6,"f":6.0,"c":3.0,"fiber":1.5,"sodium":0.0},
+  {"name":"鶏むね（皮なし）100g","aliases":["鶏胸","チキン","chicken breast"],"kcal":108,"p":22.8,"f":1.5,"c":0,"fiber":0,"sodium":0.1},
+  {"name":"ギリシャヨーグルト 100g","aliases":["ヨーグルト","greek yogurt"],"kcal":59,"p":10,"f":0.4,"c":3.6,"fiber":0,"sodium":0.05},
+  {"name":"白ごはん 150g（並）","aliases":["ご飯","米","rice"],"kcal":252,"p":3.8,"f":0.5,"c":55.7,"fiber":0.5,"sodium":0.0},
+  {"name":"玄米ごはん 150g","aliases":["玄米","brown rice"],"kcal":248,"p":4.0,"f":1.9,"c":52.8,"fiber":2.1,"sodium":0.0},
+  {"name":"納豆 1パック","aliases":["natto"],"kcal":100,"p":8.3,"f":5.0,"c":5.4,"fiber":3.0,"sodium":0.01},
+  {"name":"鮭切り身 1枚（80g）","aliases":["サーモン","salmon"],"kcal":144,"p":16.9,"f":8.6,"c":0,"fiber":0,"sodium":0.1},
+  {"name":"サバ水煮缶 100g","aliases":["鯖","mackerel"],"kcal":197,"p":23.0,"f":11.0,"c":0,"fiber":0,"sodium":0.7},
+  {"name":"ブロッコリー 100g","aliases":["broccoli"],"kcal":33,"p":4.3,"f":0.4,"c":5.2,"fiber":4.4,"sodium":0.01},
+  {"name":"りんご 1個（250g）","aliases":["apple"],"kcal":130,"p":0.3,"f":0.4,"c":34.0,"fiber":4.5,"sodium":0.0},
+  {"name":"食パン 6枚切り 1枚","aliases":["パン","bread"],"kcal":158,"p":5.6,"f":2.6,"c":27.9,"fiber":1.9,"sodium":0.4}
+]
