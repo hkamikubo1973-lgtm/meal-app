@@ -23,5 +23,17 @@ const fuse = new Fuse(foods as FoodItem[], {
 export function searchFoods(query: string): FoodItem[] {
   const q = (query ?? "").trim();
   if (!q) return [];
-  return fuse.search(q).slice(0, 10).map((h) => h.item as FoodItem);
+
+  if (!fuse) {
+    console.warn("fuse is not initialized");
+    return [];
+  }
+
+  const results = fuse.search(q);
+  if (!Array.isArray(results)) {
+    console.warn("fuse.search returned invalid:", results);
+    return [];
+  }
+
+  return results.slice(0, 10).map((h) => h.item as FoodItem);
 }

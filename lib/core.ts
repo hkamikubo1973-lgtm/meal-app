@@ -55,21 +55,21 @@ export async function initDb(): Promise<void> {
 }
 
 
-// （開発用）既存テーブル一覧をログに出す
+// (開発用) 既存テーブル一覧をログに出す
 export async function debugListTables(): Promise<void> {
   const db = await getDb();
-
-  // DB からテーブル一覧を取得
+  
   const rows = await db.getAllAsync<{ name: string }>(
     `SELECT name FROM sqlite_master WHERE type='table'`
   );
 
-if (rows && Array.isArray(rows)) {
-  console.log("DB tables:", rows.map((r: any) => r.name));
-} else {
-  console.log("DB tables: no rows or invalid result", rows);
-}
+  console.log("debugListTables rows:", rows);
 
+  if (Array.isArray(rows)) {
+    console.log("DB tables:", rows.map((r: any) => r.name));
+  } else {
+    console.log("DB tables: no rows or invalid result", rows);
+  }
 }
 
 // ======================================================
@@ -89,8 +89,14 @@ export function nowHHMM(d = new Date()): string {
 }
 
 // 入力時刻から「朝/昼/夕/間食」のバンドを割り当て
-export function assignBand(timeHHMM: string): string {
-  const [h] = timeHHMM.split(":").map((v) => Number(v) || 0);
+export function assignBand(timeHHMM?: string): string {
+  console.log("assignBand called with:", timeHHMM);
+  if (!timeHHMM) return "不明";
+
+  const parts = timeHHMM.split(":");
+  if (parts.length === 0) return "不明";
+
+  const h = Number(parts[0]);
   if (h < 10) return "朝";
   if (h < 15) return "昼";
   if (h < 20) return "夕";
