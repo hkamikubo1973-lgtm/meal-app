@@ -1,15 +1,17 @@
 // components/HapticTab.tsx
+import type { BottomTabBarButtonProps } from "@react-navigation/bottom-tabs";
 import * as Haptics from "expo-haptics";
-import * as React from "react";
-import { Pressable, type PressableProps } from "react-native";
+import { Pressable, View } from "react-native";
 
-export function HapticTab(props: PressableProps) {
+export function HapticTab({ style, children, ...rest }: BottomTabBarButtonProps) {
   return (
-    <Pressable
-      onPressIn={() =>
-        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)
-      }
-      {...props}
-    />
+    <View style={style}>
+      <Pressable
+        onPressIn={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
+        {...rest}
+      >
+        {children}
+      </Pressable>
+    </View>
   );
 }
