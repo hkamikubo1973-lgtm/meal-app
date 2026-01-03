@@ -4,20 +4,7 @@
     "slug": "meal-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "infoPlist": {
-        "NSCameraUsageDescription": "バーコード読み取りのためにカメラを使用します。"
-      }
-    },
-    "android": {
-      "permissions": [
-        "CAMERA"
-      ]
-    },
-    "plugins": [
-      "expo-router"
-    ]
+    "platforms": ["ios", "android"],
+    "sdkVersion": "54.0.0"
   }
 }
